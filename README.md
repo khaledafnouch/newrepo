@@ -7,10 +7,10 @@
 # Dans "Réservations", vous effectuez et gérez vos réservations.
 
 # pour lancer l'application :
-  pip install -r requirements.txt         /n
-  python manage.py makemigrations         /n
-  python manage.py migrate                /n  
-  python manage.py runserver              /n
+  pip install -r requirements.txt         
+  python manage.py makemigrations         
+  python manage.py migrate                  
+  python manage.py runserver              
 
 # pour creer un administrateur:
 
