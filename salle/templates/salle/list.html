@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div>
+        <div class="container">
+            <a href='create/' class="btn btn-primary">Nouvelle Salle</a>
+        </div> 
+    </div>
+<div class="content">
+{% for object in object_list %}
+
+        {% include  'salle/list-inline.html' with salle_reunion=object %}
+
+{% endfor %}
+{% endblock content %}
+
+
+</div>

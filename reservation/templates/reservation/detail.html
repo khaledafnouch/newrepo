@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Numéro de la salle de réunion: {{ object.numero_salle }}</h1>
+<h2>Date Reservation : {{ object.reservation_date }}</h2>
+<h2>heure Reservation : {{ object.reservation_time }}</h2>
+{% if request.user.is_authenticated and request.user == object.reservation_user %}
+        <a href=' {% url 'reservation-update' object.id %} ' class="btn btn-primary">éditer</a>
+        <a href=' {% url 'reservation-delete' object.id %} ' class="btn btn-danger">supprimer</a>
+{% endif %}
+
+
+{% endblock content %}

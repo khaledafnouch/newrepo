@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Salle réunion numéro : {{ object.numero_salle}}</h1>
+<h2>Capacité de la salle : {{ object.capacity }}</h2>
+{% if request.user.is_authenticated %}
+        <a href=" {% url 'salle-update object.numero_salle'%} " class="btn btn-primary">Éditer</a>
+        <a href=" {% url 'salle-delete object.numero_salle'%} " class="btn btn-danger">Supprimer</a>
+{% endif %}
+
+
+{% endblock content %}
